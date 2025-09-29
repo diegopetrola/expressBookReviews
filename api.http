@@ -1,0 +1,86 @@
+@api_HostAddress = http://localhost:5000
+###
+GET {{api_HostAddress}}/
+Accept: application/json
+###
+POST {{api_HostAddress}}/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "123"
+}
+###
+POST {{api_HostAddress}}/customer/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "123"
+}
+###
+PUT {{api_HostAddress}}/customer/auth/review/68d89db73b35f809f68e3048
+Accept: application/json
+Content-Type: application/json
+
+{"review": "Very funny book!"}
+###
+GET {{api_HostAddress}}/isbn/68d89db73b35f809f68e3048
+Accept: application/json
+Content-Type: application/json
+###
+GET {{api_HostAddress}}/review/68d89db73b35f809f68e3048
+Accept: application/json
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+DELETE {{api_HostAddress}}/customer/auth/review/68d89db73b35f809f68e3048
+Accept: application/json
+Content-Type: application/json
+
+
+
+###
+GET {{api_HostAddress}}/author/Unknown
+Accept: application/json
+Content-Type: application/json
+###
+GET {{api_HostAddress}}/title/The book
+Accept: application/json
+Content-Type: application/json
+
+
+
